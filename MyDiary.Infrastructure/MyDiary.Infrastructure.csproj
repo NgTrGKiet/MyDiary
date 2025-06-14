@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyDiary.Application\MyDiary.Application.csproj" />
+    <ProjectReference Include="..\MyDiary.BuildingBlocka\MyDiary.BuildingBlock.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -6,12 +6,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
-
-    <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.5"/>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
-    </ItemGroup>
-
+    
     <ItemGroup>
       <Content Include="..\.dockerignore">
         <Link>.dockerignore</Link>
@@ -19,7 +14,9 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers\" />
+      <ProjectReference Include="..\MyDiary.Application\MyDiary.Application.csproj" />
+      <ProjectReference Include="..\MyDiary.BuildingBlocka\MyDiary.BuildingBlock.csproj" />
+      <ProjectReference Include="..\MyDiary.Infrastructure\MyDiary.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

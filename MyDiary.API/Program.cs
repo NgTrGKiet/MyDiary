@@ -1,4 +1,11 @@
+using MyDiary.API.Extensions;
+using MyDiary.Infrastructure.Extensions;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.AddPesentation();
+
+builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -12,5 +19,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.MapControllers();
 
 app.Run();

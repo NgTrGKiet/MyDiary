@@ -16,8 +16,8 @@ public class UnitOfWork : IUnitOfWork
 
     public async Task BeginTransactionAsync()
     {
-        if(_transaction != null)
-            _transaction = await _context.Database.BeginTransactionAsync();
+        if (_transaction != null) return;
+        _transaction = await _context.Database.BeginTransactionAsync();
     }
 
     public async Task CommitAsync()

@@ -34,6 +34,12 @@ public class AuthController : ControllerBase
         return Ok(await _authService.Register(request));
     }
 
+    [HttpPost("refresh-token")]
+    public async Task<ActionResult<AuthResponse>> RefreshToken([FromBody] string refreshToken)
+    {
+        return Ok(await _authService.RefreshToken(refreshToken));
+    }
+
     [HttpGet("GetCurrentUser")]
     [Authorize]
     public async Task<ActionResult<UserDto>> GetCurrentUser()

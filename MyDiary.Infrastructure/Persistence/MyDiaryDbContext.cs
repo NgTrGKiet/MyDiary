@@ -10,5 +10,7 @@ public class MyDiaryDbContext : IdentityDbContext<ApplicationUser>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+            
+            modelBuilder.ApplyConfigurationsFromAssembly(typeof(MyDiaryDbContext).Assembly);
         }
 }

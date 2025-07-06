@@ -1,4 +1,4 @@
-﻿namespace MyDiary.Domain.Interfaces;
+﻿namespace MyDiary.Domain.Repositories;
 
 public interface IUnitOfWork
 {

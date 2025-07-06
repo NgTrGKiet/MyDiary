@@ -1,4 +1,4 @@
-﻿using MyDiary.Domain.Interfaces;
+﻿using MyDiary.Domain.Repositories;
 
 namespace MyDiary.Infrastructure.Repositories;
 

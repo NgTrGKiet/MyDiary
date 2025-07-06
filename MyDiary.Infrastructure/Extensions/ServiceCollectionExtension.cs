@@ -9,7 +9,7 @@ using MyDiary.Application.Auth;
 using MyDiary.Application.Auth.Models;
 using MyDiary.Application.Contracts.Identity;
 using MyDiary.Domain.Entities;
-using MyDiary.Domain.Interfaces;
+using MyDiary.Domain.Repositories;
 using MyDiary.Infrastructure.Persistence;
 using MyDiary.Infrastructure.Repositories;
 
@@ -47,6 +47,7 @@ public static class ServiceCollectionExtension
             .AddDefaultTokenProviders();
 
         services.AddTransient<IAuthService, AuthService>();
+        services.AddScoped<IDiaryRepository, DiaryRepository>();
 
         services.AddAuthentication(options =>
         {

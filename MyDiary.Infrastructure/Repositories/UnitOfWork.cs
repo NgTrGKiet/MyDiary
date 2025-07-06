@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Storage;
-using MyDiary.Domain.Interfaces;
+using MyDiary.Domain.Repositories;
 using MyDiary.Infrastructure.Persistence;
 
 namespace MyDiary.Infrastructure.Repositories;

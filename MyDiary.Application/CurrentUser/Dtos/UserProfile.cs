@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using MyDiary.Domain.Entities;
 
-namespace MyDiary.Application.User.Dtos;
+namespace MyDiary.Application.CurrentUser.Dtos;
 
 public class UserProfile : Profile
 {

@@ -1,4 +1,4 @@
-﻿namespace MyDiary.Application.User.Dtos;
+﻿namespace MyDiary.Application.CurrentUser.Dtos;
 
 public class UserDto
 {

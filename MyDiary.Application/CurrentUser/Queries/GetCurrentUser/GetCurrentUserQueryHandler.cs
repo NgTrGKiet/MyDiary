@@ -3,9 +3,9 @@ using AutoMapper;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Logging;
-using MyDiary.Application.User.Dtos;
+using MyDiary.Application.CurrentUser.Dtos;
 
-namespace MyDiary.Application.User.Queries.GetCurrentUser;
+namespace MyDiary.Application.CurrentUser.Queries.GetCurrentUser;
 
 public class GetCurrentUserQueryHandler(ILogger<GetCurrentUserQueryHandler> logger, IHttpContextAccessor httpContextAccessor) : IRequestHandler<GetCurrentUserQuery, UserDto>
 {

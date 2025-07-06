@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using MyDiary.Application.Auth.Models;
 using MyDiary.Application.Contracts.Identity;
-using MyDiary.Application.User.Dtos;
-using MyDiary.Application.User.Queries.GetCurrentUser;
+using MyDiary.Application.CurrentUser.Dtos;
+using MyDiary.Application.CurrentUser.Queries.GetCurrentUser;
 
 namespace MyDiary.API.Controllers;
 

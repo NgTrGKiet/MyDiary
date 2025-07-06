@@ -12,7 +12,7 @@ using MyDiary.Application.Auth.Models;
 using MyDiary.Application.Contracts.Identity;
 using MyDiary.Application.Exceptions;
 using MyDiary.Domain.Entities;
-using MyDiary.Domain.Interfaces;
+using MyDiary.Domain.Repositories;
 
 namespace MyDiary.Application.Auth;
 
@@ -165,7 +165,7 @@ public class AuthService : IAuthService
 
         var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, user.UserName),
+                new Claim(JwtRegisteredClaimNames.Sub, user.Id),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(JwtRegisteredClaimNames.Email, user.Email),
                 new Claim(JwtRegisteredClaimNames.Name, user.Name),

@@ -9,7 +9,9 @@ using MyDiary.Application.Auth;
 using MyDiary.Application.Auth.Models;
 using MyDiary.Application.Contracts.Identity;
 using MyDiary.Domain.Entities;
+using MyDiary.Domain.Interfaces;
 using MyDiary.Domain.Repositories;
+using MyDiary.Infrastructure.Authorization;
 using MyDiary.Infrastructure.Persistence;
 using MyDiary.Infrastructure.Repositories;
 
@@ -31,6 +33,10 @@ public static class ServiceCollectionExtension
             AddIdentity(services, configuration);
             
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped<IDiaryAuthorizationService, DiaryAuthorizationService>();
+
+            services.CustomAuthorization();
         }
         catch (Exception ex)
         {

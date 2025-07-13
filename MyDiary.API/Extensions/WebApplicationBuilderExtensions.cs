@@ -1,4 +1,5 @@
 ﻿using Microsoft.OpenApi.Models;
+using MyDiary.API.Middlewares;
 
 namespace MyDiary.API.Extensions;
 
@@ -32,5 +33,8 @@ public static class WebApplicationBuilderExtensions
         });
 
         builder.Services.AddEndpointsApiExplorer();
+
+        builder.Services.AddScoped<ErrorHandlingMiddleware>();
+        builder.Services.AddScoped<RequestTimeLoggingMiddleware>();
     }
 }

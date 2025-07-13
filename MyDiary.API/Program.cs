@@ -1,4 +1,5 @@
 using MyDiary.API.Extensions;
+using MyDiary.API.Middlewares;
 using MyDiary.Application;
 using MyDiary.Infrastructure.Extensions;
 using Serilog;
@@ -21,6 +22,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
+app.UseMiddleware<RequestTimeLoggingMiddleware>();
 
 app.UseSerilogRequestLogging();
 
